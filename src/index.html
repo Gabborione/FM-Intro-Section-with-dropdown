@@ -27,17 +27,29 @@
                 <a class="header__logo" href="#"><h1>snap</h1></a>
 
                 <img
-                    class="header__hamburger"
+                    class="header__hamburger toggle-nav"
                     src="./images/icon-menu.svg"
                     alt="menu-icon"
                 />
-                <nav class="header__nav">
-                    <ul class="header__nav-list">
+                <nav>
+                    <ul class="header__nav">
                         <li class="header__nav-item">
                             <a href="#" class="header__nav-link">Features</a>
+                            <a href="">
+                                <img
+                                    src="./images/icon-arrow-down.svg"
+                                    alt="arrow-down"
+                                />
+                            </a>
                         </li>
                         <li class="header__nav-item">
                             <a href="#" class="header__nav-link">Company</a>
+                            <a class="arrow-down" href="">
+                                <img
+                                    src="./images/icon-arrow-down.svg"
+                                    alt="arrow-down"
+                                />
+                            </a>
                         </li>
                         <li class="header__nav-item">
                             <a href="#" class="header__nav-link">Careers</a>
@@ -45,22 +57,16 @@
                         <li class="header__nav-item">
                             <a href="#" class="header__nav-link">About</a>
                         </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">Login</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">Register</a>
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link"
-                                >Make remote work</a
-                            >
-                        </li>
-                        <li class="header__nav-item">
-                            <a href="#" class="header__nav-link"
-                                >Get your team in sync</a
-                            >
-                        </li>
+                        <div class="login-container">
+                            <li class="header__nav-item login">
+                                <a href="#" class="header__nav-link">Login</a>
+                            </li>
+                            <li class="header__nav-item register">
+                                <a href="#" class="header__nav-link"
+                                    >Register</a
+                                >
+                            </li>
+                        </div>
                     </ul>
                 </nav>
             </header>

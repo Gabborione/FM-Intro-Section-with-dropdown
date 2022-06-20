@@ -1,13 +1,17 @@
-.header{
+@use "../abstracts/colors" as *;
+
+.header {
+    position: relative;
     width: 100%;
     height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;
+    padding: 20px;
+    z-index: 99;
 }
 
-.header__logo{
+.header__logo {
     font-size: 1rem;
     font-weight: 700;
     color: #000;
@@ -15,22 +19,75 @@
     cursor: pointer;
 }
 
-.header__hamburger{
+.header__hamburger {
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    right: 0;
     cursor: pointer;
+    z-index: 15;
 }
 
-.header__nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+nav {
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    z-index: 10;
+}
+
+.header__nav {
     position: fixed;
+    right: 0;
     top: 0;
-    left: 0;
-    z-index: 1;
-    transition: all 0.3s ease-in-out;
-    transform: translateX(-100%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    inset: 0 0 0 33%;
+    padding: 5em 1.5em;
+    background-color: $almost-white;
+    gap: 1.2em;
+}
+
+.header__nav-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.header__nav-link {
+    font-size: 1em;
+    color: $medium-gray;
+    margin: 0;
+}
+
+.arrow-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
+    margin-top: 0.8em;
+}
+
+.login {
+    align-self: center;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.register {
+    width: 100%;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    border-radius: 15px;
+    border: 2px solid $medium-gray;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
 }
