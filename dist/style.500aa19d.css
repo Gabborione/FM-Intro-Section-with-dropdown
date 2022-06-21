@@ -2,7 +2,7 @@
 .header {
   top: 0;
   right: 0;
-  width: 100%;
+  width: 100vw;
   height: 60px;
   position: fixed;
   z-index: 99;
@@ -34,14 +34,26 @@
   cursor: pointer;
   z-index: 15;
 }
+@media screen and (min-width: 820px) {
+  .header__hamburger {
+    display: none;
+  }
+}
 
 nav {
   position: absolute;
   top: 0;
   right: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: 10;
+}
+@media screen and (min-width: 820px) {
+  nav {
+    position: relative;
+    width: 100%;
+    height: 60px;
+  }
 }
 
 .header__nav {
@@ -56,7 +68,20 @@ nav {
   inset: 0 0 0 35%;
   padding: 4em 1.5em;
   background-color: hsl(0deg, 0%, 98%);
-  gap: 1.2em;
+  gap: 2em;
+}
+@media screen and (min-width: 820px) {
+  .header__nav {
+    position: relative;
+    padding: 0;
+    background-color: transparent;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+  }
 }
 
 .header__list {
@@ -64,7 +89,23 @@ nav {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 1.2em;
+  margin-top: 1em;
+  gap: 1.5em;
+}
+@media screen and (min-width: 820px) {
+  .header__list {
+    margin-left: 3em;
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    inset: none;
+    left: 0;
+    margin-top: 0;
+  }
 }
 
 .header__nav-item {
@@ -87,11 +128,21 @@ nav {
 }
 
 .login-container {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 0.8em;
+  gap: 0.8rem;
+}
+@media screen and (min-width: 820px) {
+  .login-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    gap: 2rem;
+  }
 }
 
 .login {
@@ -100,6 +151,12 @@ nav {
   font-size: 0.9em;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 820px) {
+  .login {
+    width: auto;
+  }
 }
 
 .register {
@@ -111,10 +168,16 @@ nav {
   font-size: 0.9em;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 820px) {
+  .register {
+    width: 6rem;
+  }
 }
 
 .hero {
-  margin-top: 90px;
+  margin-top: 80px;
   width: 100%;
   z-index: 0;
 }
