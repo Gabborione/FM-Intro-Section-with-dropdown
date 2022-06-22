@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Epilogue:wght@500;700&family=Overpass:wght@400;700&display=swap");
 .header {
   top: 0;
-  right: 0;
-  width: 100vw;
+  left: 0;
+  width: 100%;
   height: 60px;
   position: fixed;
   z-index: 99;
@@ -10,6 +10,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 820px) {
+  .header {
+    padding: 40px 50px;
+  }
 }
 
 .header__logo {
@@ -194,15 +199,24 @@ nav {
 
 .hero {
   margin-top: 80px;
-  width: 100%;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
   z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media screen and (min-width: 820px) {
   .hero {
+    margin-top: 100px;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    width: 80vw;
+    height: 80vh;
+    max-width: 1440px;
   }
 }
 
@@ -226,12 +240,21 @@ nav {
 }
 .hero__img-container .image-desktop {
   display: none;
-  width: 100%;
-  height: 100%;
 }
 @media screen and (min-width: 820px) {
   .hero__img-container .image-desktop {
+    width: 100%;
+    height: 100%;
     display: block;
+    object-fit: contain;
+  }
+}
+@media screen and (min-width: 820px) {
+  .hero__img-container {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
 
@@ -241,15 +264,29 @@ nav {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+}
+@media screen and (min-width: 820px) {
+  .hero__text {
+    width: 60%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 .hero__title {
   font-size: 1.89rem;
   font-weight: 700;
   color: hsl(0deg, 0%, 8%);
+}
+@media screen and (min-width: 820px) {
+  .hero__title {
+    font-size: 4rem;
+    text-align: start;
+    padding-right: 3vw;
+  }
 }
 
 .hero__subtitle {
@@ -258,6 +295,13 @@ nav {
   font-weight: 500;
   color: hsl(0deg, 0%, 41%);
   text-align: center;
+}
+@media screen and (min-width: 820px) {
+  .hero__subtitle {
+    width: 75%;
+    font-size: 1rem;
+    text-align: start;
+  }
 }
 
 .hero__btn {
@@ -268,6 +312,11 @@ nav {
   padding: 1em 1.5em;
   border-radius: 15px;
   cursor: pointer;
+}
+@media screen and (min-width: 820px) {
+  .hero__btn {
+    margin-top: 1rem;
+  }
 }
 
 .hero__sponsor-container {
@@ -282,6 +331,12 @@ nav {
 .hero__sponsor-container img {
   width: 100%;
   flex: 1 1 25%;
+}
+@media screen and (min-width: 820px) {
+  .hero__sponsor-container {
+    margin-top: 1rem;
+    gap: 2vw;
+  }
 }
 
 html {
