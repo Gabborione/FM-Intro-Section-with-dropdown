@@ -26,7 +26,7 @@
   align-items: flex-start;
 }
 
-.header__hamburger {
+#header__hamburger {
   position: relative;
   top: 0;
   right: 0;
@@ -40,9 +40,13 @@
   z-index: 999;
 }
 @media screen and (min-width: 820px) {
-  .header__hamburger {
+  #header__hamburger {
     display: none;
   }
+}
+
+#header__hamburger[aria-expanded=true] {
+  background-image: url("/icon-close-menu.bea908e0.svg");
 }
 
 nav {
@@ -62,7 +66,7 @@ nav {
 }
 
 .header__nav {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   height: 100%;
@@ -74,6 +78,8 @@ nav {
   padding: 4em 1.5em;
   background-color: hsl(0deg, 0%, 98%);
   gap: 2em;
+  transform: translateX(100%);
+  transition: transform 350ms ease-out;
 }
 @media screen and (min-width: 820px) {
   .header__nav {
@@ -86,7 +92,12 @@ nav {
     justify-content: space-between;
     top: 0;
     left: 0;
+    transform: translateX(0%);
   }
+}
+
+.header__nav[data-visible=true] {
+  transform: translateX(0%);
 }
 
 .header__list {
@@ -186,6 +197,14 @@ nav {
   width: 100%;
   z-index: 0;
 }
+@media screen and (min-width: 820px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
 .hero__img-container {
   width: 100%;
@@ -195,9 +214,25 @@ nav {
   align-items: center;
   z-index: -1;
 }
-.hero__img-container img {
+.hero__img-container .image-mobile {
+  display: block;
   width: 100%;
   height: 100%;
+}
+@media screen and (min-width: 820px) {
+  .hero__img-container .image-mobile {
+    display: none;
+  }
+}
+.hero__img-container .image-desktop {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 820px) {
+  .hero__img-container .image-desktop {
+    display: block;
+  }
 }
 
 .hero__text {
@@ -241,6 +276,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1rem;
   gap: 1rem;
 }
 .hero__sponsor-container img {
@@ -270,6 +306,7 @@ li {
 body {
   font-family: "Epilogue", sans-serif;
   background-color: hsl(0deg, 0%, 98%);
+  overflow-x: hidden;
 }
 
 .container {

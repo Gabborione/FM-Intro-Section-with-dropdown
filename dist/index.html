@@ -11,6 +11,7 @@
 
         <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
         <link rel="stylesheet" href="/style.500aa19d.css">
+        <script src="/App.dc58c3d0.js" defer=""></script>
     <script src="/style.500aa19d.js"></script></head>
     <body>
         <!-- Features Company Careers About Login Register Make remote work Get your
@@ -21,9 +22,9 @@
             <header class="header">
                 <a class="header__logo" href="#"><h1>snap</h1></a>
 
-                <div class="header__hamburger" alt="menu-icon"></div>
+                <div aria-controls="header__nav" aria-expanded="false" id="header__hamburger" alt="menu-icon"></div>
                 <nav>
-                    <div class="header__nav">
+                    <div class="header__nav" data-visible="false">
                         <ul class="header__list">
                             <li class="header__nav-item">
                                 <a href="#" class="header__nav-link">Features</a>
@@ -58,7 +59,8 @@
             </header>
             <section class="hero">
                 <div class="hero__img-container">
-                    <img class="hero__img" src="/image-hero-mobile.fa191338.png" alt="hero-img-mobile">
+                    <img class="image-mobile" src="/image-hero-mobile.fa191338.png" alt="hero-img-mobile">
+                    <img class="image-desktop" src="/image-hero-desktop.2cdb6a58.png" alt="hero-img-desktop">
                 </div>
                 <div class="hero__text">
                     <h1 class="hero__title">Make remote work</h1>
@@ -68,19 +70,19 @@
                         productivity soar.
                     </p>
                     <a href="#" class="hero__btn"> Learn more </a>
-                </div>
-                <div class="hero__sponsor-container">
-                    <div class="hero__sponsor">
-                        <img src="/client-databiz.19a3d50c.svg" alt="databiz">
-                    </div>
-                    <div class="hero__sponsor">
-                        <img src="/client-audiophile.c9355d15.svg" alt="audiophile">
-                    </div>
-                    <div class="hero__sponsor">
-                        <img src="/client-meet.cc202741.svg" alt="meet">
-                    </div>
-                    <div class="hero__sponsor">
-                        <img src="/client-maker.d677c378.svg" alt="maker">
+                    <div class="hero__sponsor-container">
+                        <div class="hero__sponsor">
+                            <img src="/client-databiz.19a3d50c.svg" alt="databiz">
+                        </div>
+                        <div class="hero__sponsor">
+                            <img src="/client-audiophile.c9355d15.svg" alt="audiophile">
+                        </div>
+                        <div class="hero__sponsor">
+                            <img src="/client-meet.cc202741.svg" alt="meet">
+                        </div>
+                        <div class="hero__sponsor">
+                            <img src="/client-maker.d677c378.svg" alt="maker">
+                        </div>
                     </div>
                 </div>
             </section>
