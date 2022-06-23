@@ -31,6 +31,7 @@ $bp-mobile: 820px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    z-index: 999;
 }
 
 #header__hamburger {
@@ -60,13 +61,12 @@ nav {
     top: 0;
     right: 0;
     width: 100vw;
-    height: 100vh;
+    height: 60px;
     z-index: 10;
 
     @media screen and (min-width: $bp-mobile) {
         position: relative;
         width: 100%;
-        height: 60px;
     }
 }
 
@@ -203,7 +203,8 @@ nav {
     }
 }
 
-.features-dropdown {
+.features-dropdown,
+.company-dropdown {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

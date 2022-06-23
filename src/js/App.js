@@ -1,19 +1,25 @@
 const menuIcon = document.getElementById("header__hamburger");
 const headerNav = document.querySelector(".header__nav");
 const container = document.querySelector(".container");
+const features = document.getElementById("features");
+const featuresDropdown = document.querySelector(".features-dropdown");
+const company = document.getElementById("company");
+const companyDropdown = document.querySelector(".company-dropdown");
 
-console.log(menuIcon);
+menuIcon.addEventListener("click", Submit(headerNav));
+features.addEventListener("click", Submit(featuresDropdown));
+company.addEventListener("click", Submit(companyDropdown));
 
-menuIcon.addEventListener("click", () => {
-    const visibility = headerNav.getAttribute("data-visible");
+function Submit(component) {
+    const visibility = component.getAttribute("data-visible");
 
     if (visibility === "false") {
         headerNav.setAttribute("data-visible", true);
         menuIcon.setAttribute("aria-expanded", true);
-        container.classList.add("overlay");
+        if (component === headerNav) container.classList.add("overlay");
     } else {
         headerNav.setAttribute("data-visible", false);
         menuIcon.setAttribute("aria-expanded", false);
-        container.classList.remove("overlay");
+        if (component === headerNav) container.classList.remove("overlay");
     }
-});
+}

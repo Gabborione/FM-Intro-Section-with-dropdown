@@ -121,20 +121,27 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 var menuIcon = document.getElementById("header__hamburger");
 var headerNav = document.querySelector(".header__nav");
 var container = document.querySelector(".container");
-console.log(menuIcon);
-menuIcon.addEventListener("click", function () {
-  var visibility = headerNav.getAttribute("data-visible");
+var features = document.getElementById("features");
+var featuresDropdown = document.querySelector(".features-dropdown");
+var company = document.getElementById("company");
+var companyDropdown = document.querySelector(".company-dropdown");
+menuIcon.addEventListener("click", Submit(headerNav));
+features.addEventListener("click", Submit(featuresDropdown));
+company.addEventListener("click", Submit(companyDropdown));
+
+function Submit(component) {
+  var visibility = component.getAttribute("data-visible");
 
   if (visibility === "false") {
     headerNav.setAttribute("data-visible", true);
     menuIcon.setAttribute("aria-expanded", true);
-    container.classList.add("overlay");
+    if (component === headerNav) container.classList.add("overlay");
   } else {
     headerNav.setAttribute("data-visible", false);
     menuIcon.setAttribute("aria-expanded", false);
-    container.classList.remove("overlay");
+    if (component === headerNav) container.classList.remove("overlay");
   }
-});
+}
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

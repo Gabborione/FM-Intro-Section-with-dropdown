@@ -47,4 +47,8 @@ body {
     top: 0;
     left: 0;
     background-color: rgba(black, 0.6);
+
+    @media screen and (min-width: $bp-mobile) {
+        display: none;
+    }
 }
