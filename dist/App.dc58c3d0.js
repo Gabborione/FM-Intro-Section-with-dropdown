@@ -125,23 +125,41 @@ var features = document.getElementById("features");
 var featuresDropdown = document.querySelector(".features-dropdown");
 var company = document.getElementById("company");
 var companyDropdown = document.querySelector(".company-dropdown");
-menuIcon.addEventListener("click", Submit(headerNav));
-features.addEventListener("click", Submit(featuresDropdown));
-company.addEventListener("click", Submit(companyDropdown));
+menuIcon.addEventListener("click", function () {
+  Submit(menuIcon, headerNav);
+});
+features.addEventListener("click", function () {
+  Submit(features, featuresDropdown);
+});
+company.addEventListener("click", function () {
+  Submit(company, companyDropdown);
+});
 
-function Submit(component) {
+function Submit(clicked, component) {
   var visibility = component.getAttribute("data-visible");
 
   if (visibility === "false") {
-    headerNav.setAttribute("data-visible", true);
-    menuIcon.setAttribute("aria-expanded", true);
+    component.setAttribute("data-visible", true);
+    clicked.setAttribute("aria-expanded", true);
     if (component === headerNav) container.classList.add("overlay");
   } else {
-    headerNav.setAttribute("data-visible", false);
-    menuIcon.setAttribute("aria-expanded", false);
+    component.setAttribute("data-visible", false);
+    clicked.setAttribute("aria-expanded", false);
     if (component === headerNav) container.classList.remove("overlay");
   }
-}
+} // function Submit() {
+//     const visibility = featuresDropdown.getAttribute("data-visible");
+//     if (visibility === "false") {
+//         featuresDropdown.setAttribute("data-visible", true);
+//         features.setAttribute("aria-expanded", true);
+//         if (featuresDropdown === headerNav) container.classList.add("overlay");
+//     } else {
+//         featuresDropdown.setAttribute("data-visible", false);
+//         features.setAttribute("aria-expanded", false);
+//         if (featuresDropdown === headerNav)
+//             container.classList.remove("overlay");
+//     }
+// }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -170,7 +188,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49383" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49454" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

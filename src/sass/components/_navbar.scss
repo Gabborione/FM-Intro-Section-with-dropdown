@@ -144,6 +144,11 @@ nav {
     cursor: pointer;
 }
 
+.header__nav__title[aria-expanded="true"] img {
+    transform: rotate(180deg);
+    transition: transform 200ms ease-in-out;
+}
+
 .header__nav-link {
     font-size: 1em;
     color: $medium-gray;
@@ -154,6 +159,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: rotate(180deg);
 }
 
 .login-container {
@@ -205,12 +211,23 @@ nav {
 
 .features-dropdown,
 .company-dropdown {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 1.5rem;
     margin-left: 1.5rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.4s linear;
+}
+
+.features-dropdown[data-visible="true"],
+.company-dropdown[data-visible="true"] {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
 }
 
 .dropped {
