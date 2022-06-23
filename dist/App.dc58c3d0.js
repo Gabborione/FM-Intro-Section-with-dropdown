@@ -120,6 +120,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"js/App.js":[function(require,module,exports) {
 var menuIcon = document.getElementById("header__hamburger");
 var headerNav = document.querySelector(".header__nav");
+var container = document.querySelector(".container");
 console.log(menuIcon);
 menuIcon.addEventListener("click", function () {
   var visibility = headerNav.getAttribute("data-visible");
@@ -127,9 +128,11 @@ menuIcon.addEventListener("click", function () {
   if (visibility === "false") {
     headerNav.setAttribute("data-visible", true);
     menuIcon.setAttribute("aria-expanded", true);
+    container.classList.add("overlay");
   } else {
     headerNav.setAttribute("data-visible", false);
     menuIcon.setAttribute("aria-expanded", false);
+    container.classList.remove("overlay");
   }
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {

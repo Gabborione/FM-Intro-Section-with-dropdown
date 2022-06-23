@@ -131,9 +131,18 @@ nav {
 
 .header__nav-item {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5em;
+}
+
+.header__nav__title {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.8em;
+  gap: 0.8rem;
+  cursor: pointer;
 }
 
 .header__nav-link {
@@ -182,19 +191,41 @@ nav {
 
 .register {
   width: 100%;
-  padding-top: 0.6em;
-  padding-bottom: 0.6em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
   border-radius: 15px;
   border: 2px solid hsl(0deg, 0%, 41%);
   font-size: 0.9em;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 @media screen and (min-width: 820px) {
   .register {
     width: 6rem;
   }
+}
+
+.features-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.dropped {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+.dropped img {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .hero {
