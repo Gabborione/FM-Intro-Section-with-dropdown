@@ -247,11 +247,15 @@ nav {
     height: 100%;
     display: block;
     object-fit: contain;
+    min-height: 400px;
+    min-width: 400px;
   }
 }
 @media screen and (min-width: 820px) {
   .hero__img-container {
     width: 40%;
+    min-height: 400px;
+    min-width: 400px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
