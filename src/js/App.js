@@ -29,18 +29,3 @@ function Submit(clicked, component) {
         if (component === headerNav) container.classList.remove("overlay");
     }
 }
-
-// function Submit() {
-//     const visibility = featuresDropdown.getAttribute("data-visible");
-
-//     if (visibility === "false") {
-//         featuresDropdown.setAttribute("data-visible", true);
-//         features.setAttribute("aria-expanded", true);
-//         if (featuresDropdown === headerNav) container.classList.add("overlay");
-//     } else {
-//         featuresDropdown.setAttribute("data-visible", false);
-//         features.setAttribute("aria-expanded", false);
-//         if (featuresDropdown === headerNav)
-//             container.classList.remove("overlay");
-//     }
-// }

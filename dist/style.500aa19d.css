@@ -56,7 +56,7 @@
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100vw;
@@ -66,6 +66,7 @@ nav {
 @media screen and (min-width: 820px) {
   nav {
     position: relative;
+    top: 0;
     width: 100%;
   }
 }
@@ -143,6 +144,11 @@ nav {
   align-items: center;
   gap: 0.8rem;
   cursor: pointer;
+}
+@media screen and (min-width: 820px) {
+  .header__nav__title {
+    position: relative;
+  }
 }
 
 .header__nav__title[aria-expanded=true] img {
@@ -226,12 +232,40 @@ nav {
   opacity: 0;
   transition: visibility 0s, opacity 0.4s linear;
 }
+@media screen and (min-width: 820px) {
+  .features-dropdown,
+.company-dropdown {
+    left: -3.5rem;
+    top: 3rem;
+    padding: 1.5em;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  }
+}
 
 .features-dropdown[data-visible=true],
 .company-dropdown[data-visible=true] {
   position: relative;
   visibility: visible;
   opacity: 1;
+}
+@media screen and (min-width: 820px) {
+  .features-dropdown[data-visible=true],
+.company-dropdown[data-visible=true] {
+    position: fixed;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .company-dropdown {
+    left: 9rem;
+    top: 3rem;
+    padding: 1.5em;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .dropped {
