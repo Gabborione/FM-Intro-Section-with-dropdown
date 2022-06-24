@@ -26,6 +26,12 @@ function Submit(clicked, component) {
     } else {
         component.setAttribute("data-visible", false);
         clicked.setAttribute("aria-expanded", false);
-        if (component === headerNav) container.classList.remove("overlay");
+        if (component === headerNav) {
+            container.classList.remove("overlay");
+            featuresDropdown.setAttribute("data-visible", false);
+            features.setAttribute("aria-expanded", false);
+            companyDropdown.setAttribute("data-visible", false);
+            company.setAttribute("aria-expanded", false);
+        }
     }
 }

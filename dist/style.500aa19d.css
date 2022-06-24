@@ -52,6 +52,7 @@
 }
 
 #header__hamburger[aria-expanded=true] {
+  z-index: 999;
   background-image: url("/icon-close-menu.bea908e0.svg");
 }
 

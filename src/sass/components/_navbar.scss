@@ -53,6 +53,7 @@ $bp-mobile: 820px;
 }
 
 #header__hamburger[aria-expanded="true"] {
+    z-index: 999;
     background-image: url("../images/icon-close-menu.svg");
 }
 
